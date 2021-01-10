@@ -25,8 +25,7 @@ public class AppDetails {
 		System.out.println("**********************************************\n\n");
 		System.out.println("*******DEVELOPERS DETAILS***********\n");
 		System.out.println("------\tAman Chaurasia--------Organisation:XYZ Consultancy Services----\n");
-		System.out.println(
-				"-----To Inquire, Contact:+91-7897275536-----------\n\n--------MailTo:amanchaurasia040@gmail.com---------");
+		System.out.println("-----To Inquire, Contact:+91-7897275536----------\n\n--------MailTo:amanchaurasia040@gmail.com---------");
 		System.out.println("\n\n\n\n\n Press YES to proceed  ->->");
 		String str = sc.next();
 		if (str.equalsIgnoreCase("yes"));
