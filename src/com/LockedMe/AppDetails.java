@@ -22,14 +22,24 @@ public class AppDetails {
 		System.out.println("*********************************************\n");
 		System.out.println("\tWELCOME TO LOCKME.COM\n");
 		System.out.println("*********************************************\n");
-		System.out.println("**********************************************\n\n");
-		System.out.println("*******DEVELOPERS DETAILS***********\n");
-		System.out.println("------\tAman Chaurasia--------Organisation:XYZ Consultancy Services----\n");
-		System.out.println("-----To Inquire, Contact:+91-7897275536----------\n\n--------MailTo:amanchaurasia040@gmail.com---------");
-		System.out.println("\n\n\n\n\n Press YES to proceed  ->->");
+		System.out.println("*********************************************\n\n");
+		System.out.println("*********** DEVELOPERS DETAILS ***************\n");
+		System.out.println("----------------Aman Chaurasia-----------------\n");
+		System.out.println("-----Organisation:XYZ Consultancy Services-------\n");
+				
+		System.out.println("-----To Inquire, Contact:+91-7897275536----------\n\n--------MailTo:amanchaurasia040@gmail.com---------\n");
+		System.out.println(("This Application is useful in:\n\n#Sorting files inside directory and its subdirectory \n#Adding file to a directory\n#Deleteing a file in a directory\n#Searching a file in a directory\n"));
+		System.out.println("\n\n\n Press YES to proceed  ->->");
 		String str = sc.next();
-		if (str.equalsIgnoreCase("yes"));
-		return true;
+		while(true) {
+		if (str.equalsIgnoreCase("yes")){
+			return true;
+		}
+		else {
+			System.out.println("Invalid Entry!! Please press YES to continue");
+			str=sc.next();
+		}
+		}
 	}
 
 	public static void choices() {
