@@ -26,19 +26,20 @@ public class AppDetails {
 		System.out.println("*********** DEVELOPERS DETAILS ***************\n");
 		System.out.println("----------------Aman Chaurasia-----------------\n");
 		System.out.println("-----Organisation:XYZ Consultancy Services-------\n");
-				
-		System.out.println("-----To Inquire, Contact:+91-7897275536----------\n\n--------MailTo:amanchaurasia040@gmail.com---------\n");
-		System.out.println(("This Application is useful in:\n\n#Sorting files inside directory and its subdirectory \n#Adding file to a directory\n#Deleteing a file in a directory\n#Searching a file in a directory\n"));
+
+		System.out.println(
+				"-----To Inquire, Contact:+91-7897275536----------\n\n--------MailTo:amanchaurasia040@gmail.com---------\n");
+		System.out.println(
+				("This Application is useful in:\n\n#Sorting files inside directory and its subdirectory \n#Adding file to a directory\n#Deleteing a file in a directory\n#Searching a file in a directory\n"));
 		System.out.println("\n\n\n Press YES to proceed  ->->");
 		String str = sc.next();
-		while(true) {
-		if (str.equalsIgnoreCase("yes")){
-			return true;
-		}
-		else {
-			System.out.println("Invalid Entry!! Please press YES to continue");
-			str=sc.next();
-		}
+		while (true) {
+			if (str.equalsIgnoreCase("yes")) {
+				return true;
+			} else {
+				System.out.println("Invalid Entry!! Please press YES to continue");
+				str = sc.next();
+			}
 		}
 	}
 
@@ -135,24 +136,31 @@ public class AppDetails {
 		List<String> list = new ArrayList<>();
 		try {
 			Files.write(path, list, StandardOpenOption.CREATE_NEW);
-		} catch (IOException e) {
+			System.out.println("\nFile Created!");
+		} 
+		
+		catch (IOException e) {
 			System.out.println("\nFile Exists!");
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
-		System.out.println("\nFile Created!");
+		
 	}
 
 	public static void deleteFile() {
 		System.out.println("Enter the file to be deleted with absolute path\n");
 		Path path = Paths.get(sc.next());
-		try {
-			Files.deleteIfExists(path);
+			try {
+			if(Files.deleteIfExists(path)){
 			System.out.println("File Deleted!");
-		} catch (DirectoryNotEmptyException e) {
+			}else {
+				System.out.println("File does not exist");
+			}
+			}
+		catch (DirectoryNotEmptyException e) {
 			e.printStackTrace();
 		} catch (FileNotFoundException e) {
 			System.out.println(e.getMessage());
-		} catch (IOException e) {
+			} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
